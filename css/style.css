@@ -30,6 +30,7 @@ main {
 }
 
 .robotron {
+    width: 100%;
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
@@ -72,7 +73,7 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
 }
 
 .montador-conteudo {
@@ -209,30 +210,7 @@ main {
     margin: 10px 0 0;
 }
 
-@media screen and (max-width: 1600px) {
-    body { 
-        font-size: 14px;
-    }
-    main {
-        width: 90vw;
-        height: 80vh;
-        margin: 5vh auto;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    body { 
-        font-size: 13px;
-    }
-
-    main {
-        width: 96vw;
-        height: 80vh;
-        margin: 10vh auto;
-    }
-}
-
-/* ************************ Opção de roca de cores *********/
+/* ************************ Opção de troca de cores *********/
 .texto-seletor-cor{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -246,13 +224,52 @@ main {
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    font-weight: 400;    
+    background-color: blue;
 }
 .cor-robo{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
+    background-color: white;
 }
 .alt-cor{
     color: black;
-    background-color: red;
 }
+
+/* Media screen */
+
+@media screen and (max-width: 1600px) {
+    body { 
+        font-size: 14px;
+    }
+    main {
+        width: 90vw;
+        height: 80vh;
+        margin: 5vh auto;
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    body { 
+        font-size: 13px;
+    }
+
+    main {
+        width: 96vw;
+        height: 100vh;
+        margin: 10vh auto;
+        flex-direction: column;
+    }
+    .robotron{
+        position: static;
+    }
+    .robo{
+        z-index: -1;
+    }
+    .cores-robo{
+    width: 80%;
+    margin: 10px auto;
+}
+

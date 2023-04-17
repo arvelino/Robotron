@@ -80,7 +80,6 @@ function atualizaEstatisticas(peca,operacao,validar){
 
 }
 
-
 producao.onclick = validaProducao;
 
 function validaProducao(){
@@ -95,10 +94,15 @@ function validaProducao(){
         alert(' Por favor, insira as configurações para a produção do ROBOTRON');
     }else{
         alert(' Dados recebidos. Produção iniciada!');
-    }
-    
-        
+    }        
 }
+
+/* Alteração da cor do robo */
+
+const imgRobo = document.querySelector('#robotron');
+
+const seletor = document.querySelector('opcao-cor-robo')
+console.log(imgRobo.src)
 
 
 
