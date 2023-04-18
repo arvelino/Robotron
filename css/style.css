@@ -251,7 +251,11 @@ main {
     
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px){
+    
+}
+
+@media screen and (max-width: 640px) {
     body { 
         font-size: 13px;
     }
@@ -273,22 +277,26 @@ main {
     .cores-robo{
         width: 60%;
         margin: 10px auto;
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     .texto-seletor-cor{    
         font-size: 25px;
         color: #000000;
-        text-shadow: 1px 1px rgba(128, 128, 128, 0.788);
+        text-shadow: 1px 1px rgba(92, 90, 90, 0.911);
     }
     .opcao-cor-robo{
     width: 90%;
     height: 30px;    
     font-size: 20px;
+    font-weight: 700;
+    background-color: #ffffff80;
+    border: solid #000000;
+    border-radius: 10px;
     }
     .cor-robo{       
-        font-size: 18px;
-        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
     }
 }
