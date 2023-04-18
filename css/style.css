@@ -34,14 +34,14 @@ main {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
-    flex-basis: 40%;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
 }
 
 .robo {
-    height: 110%;
+    width: 80%;
     z-index: 1;
-    position: absolute;
     left: -20%;
     top: -5%;
 }
@@ -52,7 +52,6 @@ main {
     font-size: 130px;
     position: absolute;
     bottom: 7rem;
-    left: -3rem;
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -211,15 +210,18 @@ main {
 }
 
 /* ************************ Opção de troca de cores *********/
+
+.cores-robo{
+    width: 40%;
+    z-index: 1;
+}
+
 .texto-seletor-cor{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
-.cores-robo{
-    width: 10%;
-    z-index: 1;
-}
+
 .opcao-cor-robo{
     width: 100%;
     height: 30px;
@@ -235,7 +237,7 @@ main {
 }
 
 
-/* Media screen */
+/**********************  Media screen */
 
 @media screen and (max-width: 1600px) {
     body { 
@@ -261,18 +263,31 @@ main {
         flex-direction: column;
     }
     .robotron{
-        position: static;
+        flex-direction: column;
     }
     .robo{
-        z-index: -1;
+        width: 100%;
+        z-index: 1;
     }
+
     .cores-robo{
-        width: 70%;
+        width: 60%;
         margin: 10px auto;
-        font-size: 14px;
+        font-size: 14px; 
     }
 
     .texto-seletor-cor{    
-        font-size: 20px;
+        font-size: 25px;
+        text-shadow: 1px 1px rgba(128, 128, 128, 0.788);
+    }
+    .opcao-cor-robo{
+    width: 90%;
+    height: 30px;    
+    font-size: 20px;
+    }
+    .cor-robo{       
+        font-size: 18px;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
     }
 }
