@@ -100,9 +100,21 @@ function validaProducao(){
 /* Alteração da cor do robo */
 
 const imgRobo = document.querySelector('#robotron');
+const seletor = document.querySelectorAll('.cor-robo');
+const opcao = document.querySelector('.opcao-cor-robo')
 
-const seletor = document.querySelector('opcao-cor-robo')
-console.log(imgRobo.src)
+seletor.forEach((elemento)=>{
+    elemento.addEventListener('click', (evento) => {
+        const cor = evento.target;
+        imgRobo.src = `img/Robotron-${cor.textContent}.png`;
+        // opcao.style.backgroundColor = cor.value;
+
+        // console.log(opcao)
+    })
+})
+
+
+
 
 
 
