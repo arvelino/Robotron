@@ -103,12 +103,10 @@ const seletor = document.querySelectorAll('.cor-robo');
 const opcao = document.querySelector('.opcao-cor-robo')
 
 opcao.addEventListener('change', ()=>{
-    // console.log('Mudou')
-    seletor.forEach((item) => {
+     seletor.forEach((item) => {
             if(item.selected){
                 trocaCor(item.textContent)
             }
-        // console.log(item.textContent)
         
     })
 })
