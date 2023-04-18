@@ -37,7 +37,6 @@ const pecas = {
     }
 }
 let validador=0;
-// console.log(estatisticas);
 
 controle.forEach( (elemento) => {
 
@@ -47,7 +46,7 @@ controle.forEach( (elemento) => {
 
         manipulaDados(evento.target.dataset.controle, contador);
       
-        atualizaEstatisticas(evento.target.dataset.peca,evento.target.dataset.controle,validador);      
+        atualizaEstatisticas(evento.target.dataset.peca,evento.target.dataset.controle,validador);     
         
     })
     
@@ -101,15 +100,24 @@ function validaProducao(){
 
 const imgRobo = document.querySelector('#robotron');
 const seletor = document.querySelectorAll('.cor-robo');
+const opcao = document.querySelector('.opcao-cor-robo')
 
-seletor.forEach( (item) => {
-    item.addEventListener("click", (evento) => {
-        const cor = evento.target.textContent;
-        imgRobo.src = `img/Robotron-${cor}.png`;
-        console.log(item.textContent);
+opcao.addEventListener('change', ()=>{
+    // console.log('Mudou')
+    seletor.forEach((item) => {
+            if(item.selected){
+                trocaCor(item.textContent)
+            }
+        // console.log(item.textContent)
+        
     })
-
 })
+
+function trocaCor(cor){
+    imgRobo.src = `img/Robotron-${cor}.png`;
+    console.log(cor);
+}
+
 
 
 
