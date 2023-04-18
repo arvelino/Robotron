@@ -278,6 +278,7 @@ main {
 
     .texto-seletor-cor{    
         font-size: 25px;
+        color: #000000;
         text-shadow: 1px 1px rgba(128, 128, 128, 0.788);
     }
     .opcao-cor-robo{
