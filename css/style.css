@@ -213,11 +213,12 @@ main {
 /* ************************ Opção de troca de cores *********/
 .texto-seletor-cor{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
 }
 .cores-robo{
     width: 10%;
+    z-index: 1;
 }
 .opcao-cor-robo{
     width: 100%;
@@ -266,6 +267,12 @@ main {
         z-index: -1;
     }
     .cores-robo{
-    width: 80%;
-    margin: 10px auto;
+        width: 70%;
+        margin: 10px auto;
+        font-size: 14px;
+    }
+
+    .texto-seletor-cor{    
+        font-size: 20px;
+    }
 }

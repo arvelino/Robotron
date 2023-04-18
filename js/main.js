@@ -1,7 +1,7 @@
 
 
 const controle = document.querySelectorAll("[data-controle]")
-const estatisticas = document.querySelectorAll("[data-estatisticas")
+const estatisticas = document.querySelectorAll("[data-estatisticas]")
 const producao = document.querySelector('#producao')
 const pecas = {
     "bracos": {
@@ -101,16 +101,14 @@ function validaProducao(){
 
 const imgRobo = document.querySelector('#robotron');
 const seletor = document.querySelectorAll('.cor-robo');
-const opcao = document.querySelector('.opcao-cor-robo')
 
-seletor.forEach((elemento)=>{
-    elemento.addEventListener('click', (evento) => {
-        const cor = evento.target;
-        imgRobo.src = `img/Robotron-${cor.textContent}.png`;
-        // opcao.style.backgroundColor = cor.value;
-
-        // console.log(opcao)
+seletor.forEach( (item) => {
+    item.addEventListener("click", (evento) => {
+        const cor = evento.target.textContent;
+        imgRobo.src = `img/Robotron-${cor}.png`;
+        console.log(item.textContent);
     })
+
 })
 
 
